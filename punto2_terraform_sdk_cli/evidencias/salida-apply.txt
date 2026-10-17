@@ -1,0 +1,432 @@
+Primera corrida (se me olvidó añadir unos permisos entonces hubo un error):
+data.aws_ami.al2023: Reading...
+data.aws_vpc.default: Reading...
+data.aws_caller_identity.current: Reading...
+data.aws_caller_identity.current: Read complete after 1s [id=966273136781]
+data.aws_ami.al2023: Read complete after 1s [id=ami-0938c21410d9519c6]
+data.aws_vpc.default: Read complete after 2s [id=vpc-0acc2bc39fef6d204]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_db_instance.lab will be created
+  + resource "aws_db_instance" "lab" {
+      + address                               = (known after apply)
+      + allocated_storage                     = 20
+      + apply_immediately                     = false
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + backup_retention_period               = 0
+      + backup_target                         = (known after apply)
+      + backup_window                         = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + character_set_name                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + database_insights_mode                = (known after apply)
+      + db_name                               = (known after apply)
+      + db_subnet_group_name                  = (known after apply)
+      + dedicated_log_volume                  = false
+      + delete_automated_backups              = true
+      + domain_fqdn                           = (known after apply)
+      + endpoint                              = (known after apply)
+      + engine                                = "postgres"
+      + engine_lifecycle_support              = (known after apply)
+      + engine_version                        = (known after apply)
+      + engine_version_actual                 = (known after apply)
+      + hosted_zone_id                        = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = "lab-db"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t3.micro"
+      + iops                                  = (known after apply)
+      + kms_key_id                            = (known after apply)
+      + latest_restorable_time                = (known after apply)
+      + license_model                         = (known after apply)
+      + listener_endpoint                     = (known after apply)
+      + maintenance_window                    = (known after apply)
+      + manage_master_user_password           = true
+      + master_user_secret                    = (known after apply)
+      + master_user_secret_kms_key_id         = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + multi_az                              = (known after apply)
+      + nchar_character_set_name              = (known after apply)
+      + network_type                          = (known after apply)
+      + option_group_name                     = (known after apply)
+      + parameter_group_name                  = (known after apply)
+      + password_wo                           = (write-only attribute)
+      + performance_insights_enabled          = false
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = (known after apply)
+      + publicly_accessible                   = false
+      + replica_mode                          = (known after apply)
+      + replicas                              = (known after apply)
+      + resource_id                           = (known after apply)
+      + skip_final_snapshot                   = true
+      + snapshot_identifier                   = (known after apply)
+      + status                                = (known after apply)
+      + storage_throughput                    = (known after apply)
+      + storage_type                          = (known after apply)
+      + tags_all                              = (known after apply)
+      + timezone                              = (known after apply)
+      + username                              = "dbadmin"
+      + vpc_security_group_ids                = (known after apply)
+    }
+
+  # aws_instance.lab will be created
+  + resource "aws_instance" "lab" {
+      + ami                                  = "ami-0938c21410d9519c6"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + enable_primary_ipv6                  = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + spot_instance_request_id             = (known after apply)
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Name" = "lab-ec2"
+        }
+      + tags_all                             = {
+          + "Name" = "lab-ec2"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification (known after apply)
+
+      + cpu_options (known after apply)
+
+      + ebs_block_device (known after apply)
+
+      + enclave_options (known after apply)
+
+      + ephemeral_block_device (known after apply)
+
+      + instance_market_options (known after apply)
+
+      + maintenance_options (known after apply)
+
+      + metadata_options (known after apply)
+
+      + network_interface (known after apply)
+
+      + private_dns_name_options (known after apply)
+
+      + root_block_device (known after apply)
+    }
+
+  # aws_s3_bucket.lab will be created
+  + resource "aws_s3_bucket" "lab" {
+      + acceleration_status         = (known after apply)
+      + acl                         = (known after apply)
+      + arn                         = (known after apply)
+      + bucket                      = "lab-bucket-966273136781"
+      + bucket_domain_name          = (known after apply)
+      + bucket_prefix               = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = true
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + object_lock_enabled         = (known after apply)
+      + policy                      = (known after apply)
+      + region                      = (known after apply)
+      + request_payer               = (known after apply)
+      + tags_all                    = (known after apply)
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + cors_rule (known after apply)
+
+      + grant (known after apply)
+
+      + lifecycle_rule (known after apply)
+
+      + logging (known after apply)
+
+      + object_lock_configuration (known after apply)
+
+      + replication_configuration (known after apply)
+
+      + server_side_encryption_configuration (known after apply)
+
+      + versioning (known after apply)
+
+      + website (known after apply)
+    }
+
+  # aws_security_group.ec2 will be created
+  + resource "aws_security_group" "ec2" {
+      + arn                    = (known after apply)
+      + description            = "Grupo de seguridad para la instancia de EC2 de la actividad"
+      + egress                 = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + from_port        = 0
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "-1"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ]
+      + id                     = (known after apply)
+      + ingress                = (known after apply)
+      + name                   = "lab-ec2-sg"
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Name" = "lab-ec2-sg"
+        }
+      + tags_all               = {
+          + "Name" = "lab-ec2-sg"
+        }
+      + vpc_id                 = "vpc-0acc2bc39fef6d204"
+    }
+
+  # aws_security_group.rds will be created
+  + resource "aws_security_group" "rds" {
+      + arn                    = (known after apply)
+      + description            = "Solo permite PostgreSQL desde la instancia de EC2 de la actividad"
+      + egress                 = (known after apply)
+      + id                     = (known after apply)
+      + ingress                = [
+          + {
+              + cidr_blocks      = []
+              + from_port        = 5432
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = (known after apply)
+              + self             = false
+              + to_port          = 5432
+                # (1 unchanged attribute hidden)
+            },
+        ]
+      + name                   = "lab-rds-sg"
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Name" = "lab-rds-sg"
+        }
+      + tags_all               = {
+          + "Name" = "lab-rds-sg"
+        }
+      + vpc_id                 = "vpc-0acc2bc39fef6d204"
+    }
+
+Plan: 5 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + bucket_name     = "lab-bucket-966273136781"
+  + ec2_instance_id = (known after apply)
+  + rds_endpoint    = (known after apply)
+  + rds_secret_arn  = (known after apply)
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_s3_bucket.lab: Creating...
+aws_security_group.ec2: Creating...
+aws_s3_bucket.lab: Creation complete after 2s [id=lab-bucket-966273136781]
+aws_security_group.ec2: Creation complete after 3s [id=sg-09fd507ca9e5342da]
+aws_security_group.rds: Creating...
+aws_instance.lab: Creating...
+aws_security_group.rds: Creation complete after 3s [id=sg-07ed06064794496a9]
+aws_db_instance.lab: Creating...
+aws_instance.lab: Still creating... [00m10s elapsed]
+aws_instance.lab: Creation complete after 14s [id=i-012bf658030d2db68]
+╷
+│ Error: creating RDS DB Instance (lab-db): operation error RDS: CreateDBInstance, https response error StatusCode: 400, RequestID: 115b7863-2f78-4fa6-b33a-f9af7691f7f2, KMSKeyNotAccessibleFault: The specified KMS key [null] either doesn't exist, isn't enabled, or isn't accessible by the current user. Either specify a different key or access the key with a different user.
+│
+│   with aws_db_instance.lab,
+│   on main.tf line 77, in resource "aws_db_instance" "lab":
+│   77: resource "aws_db_instance" "lab" {
+│
+╵
+Segunda corrida:
+data.aws_vpc.default: Reading...
+data.aws_ami.al2023: Reading...
+data.aws_caller_identity.current: Reading...
+data.aws_caller_identity.current: Read complete after 0s [id=966273136781]
+aws_s3_bucket.lab: Refreshing state... [id=lab-bucket-966273136781]
+data.aws_ami.al2023: Read complete after 0s [id=ami-0938c21410d9519c6]
+data.aws_vpc.default: Read complete after 1s [id=vpc-0acc2bc39fef6d204]
+aws_security_group.ec2: Refreshing state... [id=sg-09fd507ca9e5342da]
+aws_security_group.rds: Refreshing state... [id=sg-07ed06064794496a9]
+aws_instance.lab: Refreshing state... [id=i-012bf658030d2db68]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_db_instance.lab will be created
+  + resource "aws_db_instance" "lab" {
+      + address                               = (known after apply)
+      + allocated_storage                     = 20
+      + apply_immediately                     = false
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + backup_retention_period               = 0
+      + backup_target                         = (known after apply)
+      + backup_window                         = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + character_set_name                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + database_insights_mode                = (known after apply)
+      + db_name                               = (known after apply)
+      + db_subnet_group_name                  = (known after apply)
+      + dedicated_log_volume                  = false
+      + delete_automated_backups              = true
+      + domain_fqdn                           = (known after apply)
+      + endpoint                              = (known after apply)
+      + engine                                = "postgres"
+      + engine_lifecycle_support              = (known after apply)
+      + engine_version                        = (known after apply)
+      + engine_version_actual                 = (known after apply)
+      + hosted_zone_id                        = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = "lab-db"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t3.micro"
+      + iops                                  = (known after apply)
+      + kms_key_id                            = (known after apply)
+      + latest_restorable_time                = (known after apply)
+      + license_model                         = (known after apply)
+      + listener_endpoint                     = (known after apply)
+      + maintenance_window                    = (known after apply)
+      + manage_master_user_password           = true
+      + master_user_secret                    = (known after apply)
+      + master_user_secret_kms_key_id         = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + multi_az                              = (known after apply)
+      + nchar_character_set_name              = (known after apply)
+      + network_type                          = (known after apply)
+      + option_group_name                     = (known after apply)
+      + parameter_group_name                  = (known after apply)
+      + password_wo                           = (write-only attribute)
+      + performance_insights_enabled          = false
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = (known after apply)
+      + publicly_accessible                   = false
+      + replica_mode                          = (known after apply)
+      + replicas                              = (known after apply)
+      + resource_id                           = (known after apply)
+      + skip_final_snapshot                   = true
+      + snapshot_identifier                   = (known after apply)
+      + status                                = (known after apply)
+      + storage_throughput                    = (known after apply)
+      + storage_type                          = (known after apply)
+      + tags_all                              = (known after apply)
+      + timezone                              = (known after apply)
+      + username                              = "dbadmin"
+      + vpc_security_group_ids                = [
+          + "sg-07ed06064794496a9",
+        ]
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + rds_endpoint    = (known after apply)
+  + rds_secret_arn  = (known after apply)
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_db_instance.lab: Creating...
+aws_db_instance.lab: Still creating... [00m10s elapsed]
+aws_db_instance.lab: Still creating... [00m19s elapsed]
+aws_db_instance.lab: Still creating... [00m28s elapsed]
+aws_db_instance.lab: Still creating... [00m38s elapsed]
+aws_db_instance.lab: Still creating... [00m47s elapsed]
+aws_db_instance.lab: Still creating... [00m57s elapsed]
+aws_db_instance.lab: Still creating... [01m07s elapsed]
+aws_db_instance.lab: Still creating... [01m16s elapsed]
+aws_db_instance.lab: Still creating... [01m25s elapsed]
+aws_db_instance.lab: Still creating... [01m35s elapsed]
+aws_db_instance.lab: Still creating... [01m44s elapsed]
+aws_db_instance.lab: Still creating... [01m53s elapsed]
+aws_db_instance.lab: Still creating... [02m03s elapsed]
+aws_db_instance.lab: Still creating... [02m12s elapsed]
+aws_db_instance.lab: Still creating... [02m21s elapsed]
+aws_db_instance.lab: Still creating... [02m31s elapsed]
+aws_db_instance.lab: Still creating... [02m41s elapsed]
+aws_db_instance.lab: Still creating... [02m50s elapsed]
+aws_db_instance.lab: Still creating... [03m00s elapsed]
+aws_db_instance.lab: Still creating... [03m09s elapsed]
+aws_db_instance.lab: Still creating... [03m18s elapsed]
+aws_db_instance.lab: Still creating... [03m28s elapsed]
+aws_db_instance.lab: Still creating... [03m37s elapsed]
+aws_db_instance.lab: Still creating... [03m46s elapsed]
+aws_db_instance.lab: Still creating... [03m56s elapsed]
+aws_db_instance.lab: Still creating... [04m06s elapsed]
+aws_db_instance.lab: Still creating... [04m15s elapsed]
+aws_db_instance.lab: Still creating... [04m25s elapsed]
+aws_db_instance.lab: Still creating... [04m34s elapsed]
+aws_db_instance.lab: Still creating... [04m43s elapsed]
+aws_db_instance.lab: Still creating... [04m53s elapsed]
+aws_db_instance.lab: Still creating... [05m02s elapsed]
+aws_db_instance.lab: Still creating... [05m11s elapsed]
+aws_db_instance.lab: Still creating... [05m21s elapsed]
+aws_db_instance.lab: Creation complete after 5m21s [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+bucket_name = "lab-bucket-966273136781"
+ec2_instance_id = "i-012bf658030d2db68"
+rds_endpoint = "lab-db.cvwk6kcg8sv3.us-east-2.rds.amazonaws.com:5432"
+rds_secret_arn = "arn:aws:secretsmanager:us-east-2:966273136781:secret:rds!db-c96d03ac-5f35-43e1-b7f1-03a2a652e310-EkK5Q3"

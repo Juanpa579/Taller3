@@ -1,0 +1,333 @@
+data.aws_vpc.default: Reading...
+data.aws_ami.al2023: Reading...
+data.aws_caller_identity.current: Reading...
+data.aws_caller_identity.current: Read complete after 0s [id=966273136781]
+aws_s3_bucket.lab: Refreshing state... [id=lab-bucket-966273136781]
+data.aws_ami.al2023: Read complete after 1s [id=ami-0938c21410d9519c6]
+data.aws_vpc.default: Read complete after 1s [id=vpc-0acc2bc39fef6d204]
+aws_security_group.ec2: Refreshing state... [id=sg-09fd507ca9e5342da]
+aws_security_group.rds: Refreshing state... [id=sg-07ed06064794496a9]
+aws_instance.lab: Refreshing state... [id=i-012bf658030d2db68]
+aws_db_instance.lab: Refreshing state... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_db_instance.lab will be destroyed
+  - resource "aws_db_instance" "lab" {
+      - address                               = "lab-db.cvwk6kcg8sv3.us-east-2.rds.amazonaws.com" -> null
+      - allocated_storage                     = 20 -> null
+      - apply_immediately                     = false -> null
+      - arn                                   = "arn:aws:rds:us-east-2:966273136781:db:lab-db" -> null
+      - auto_minor_version_upgrade            = true -> null
+      - availability_zone                     = "us-east-2c" -> null
+      - backup_retention_period               = 0 -> null
+      - backup_target                         = "region" -> null
+      - backup_window                         = "08:17-08:47" -> null
+      - ca_cert_identifier                    = "rds-ca-rsa2048-g1" -> null
+      - copy_tags_to_snapshot                 = false -> null
+      - customer_owned_ip_enabled             = false -> null
+      - database_insights_mode                = "standard" -> null
+      - db_subnet_group_name                  = "default" -> null
+      - dedicated_log_volume                  = false -> null
+      - delete_automated_backups              = true -> null
+      - deletion_protection                   = false -> null
+      - domain_dns_ips                        = [] -> null
+      - enabled_cloudwatch_logs_exports       = [] -> null
+      - endpoint                              = "lab-db.cvwk6kcg8sv3.us-east-2.rds.amazonaws.com:5432" -> null
+      - engine                                = "postgres" -> null
+      - engine_lifecycle_support              = "open-source-rds-extended-support" -> null
+      - engine_version                        = "18.3" -> null
+      - engine_version_actual                 = "18.3" -> null
+      - hosted_zone_id                        = "Z2XHWR1WZ565X2" -> null
+      - iam_database_authentication_enabled   = false -> null
+      - id                                    = "db-UXC4EPHOUQWU52CKXQXLJHMY7E" -> null
+      - identifier                            = "lab-db" -> null
+      - instance_class                        = "db.t3.micro" -> null
+      - iops                                  = 0 -> null
+      - license_model                         = "postgresql-license" -> null
+      - listener_endpoint                     = [] -> null
+      - maintenance_window                    = "fri:06:03-fri:06:33" -> null
+      - manage_master_user_password           = true -> null
+      - master_user_secret                    = [
+          - {
+              - kms_key_id    = "arn:aws:kms:us-east-2:966273136781:key/6366cf42-b2d4-4fba-a337-e492b33801e0"
+              - secret_arn    = "arn:aws:secretsmanager:us-east-2:966273136781:secret:rds!db-c96d03ac-5f35-43e1-b7f1-03a2a652e310-EkK5Q3"
+              - secret_status = "active"
+            },
+        ] -> null
+      - max_allocated_storage                 = 0 -> null
+      - monitoring_interval                   = 0 -> null
+      - multi_az                              = false -> null
+      - network_type                          = "IPV4" -> null
+      - option_group_name                     = "default:postgres-18" -> null
+      - parameter_group_name                  = "default.postgres18" -> null
+      - password_wo                           = (write-only attribute) -> null
+      - performance_insights_enabled          = false -> null
+      - performance_insights_retention_period = 0 -> null
+      - port                                  = 5432 -> null
+      - publicly_accessible                   = false -> null
+      - replicas                              = [] -> null
+      - resource_id                           = "db-UXC4EPHOUQWU52CKXQXLJHMY7E" -> null
+      - skip_final_snapshot                   = true -> null
+      - status                                = "available" -> null
+      - storage_encrypted                     = false -> null
+      - storage_throughput                    = 0 -> null
+      - storage_type                          = "gp2" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {} -> null
+      - username                              = "dbadmin" -> null
+      - vpc_security_group_ids                = [
+          - "sg-07ed06064794496a9",
+        ] -> null
+        # (17 unchanged attributes hidden)
+    }
+
+  # aws_instance.lab will be destroyed
+  - resource "aws_instance" "lab" {
+      - ami                                  = "ami-0938c21410d9519c6" -> null
+      - arn                                  = "arn:aws:ec2:us-east-2:966273136781:instance/i-012bf658030d2db68" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-2b" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 2 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-012bf658030d2db68" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t3.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-093710bdd06898150" -> null
+      - private_dns                          = "ip-172-31-27-35.us-east-2.compute.internal" -> null
+      - private_ip                           = "172.31.27.35" -> null
+      - public_dns                           = "ec2-18-220-57-65.us-east-2.compute.amazonaws.com" -> null
+      - public_ip                            = "18.220.57.65" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [
+          - "lab-ec2-sg",
+        ] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0ea2cb66e137a794d" -> null
+      - tags                                 = {
+          - "Name" = "lab-ec2"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "lab-ec2"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-09fd507ca9e5342da",
+        ] -> null
+        # (8 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 2 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-07563ed08fdd6523d" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # aws_s3_bucket.lab will be destroyed
+  - resource "aws_s3_bucket" "lab" {
+      - arn                         = "arn:aws:s3:::lab-bucket-966273136781" -> null
+      - bucket                      = "lab-bucket-966273136781" -> null
+      - bucket_domain_name          = "lab-bucket-966273136781.s3.amazonaws.com" -> null
+      - bucket_regional_domain_name = "lab-bucket-966273136781.s3.us-east-2.amazonaws.com" -> null
+      - force_destroy               = true -> null
+      - hosted_zone_id              = "Z2O1EMRO9K5GLX" -> null
+      - id                          = "lab-bucket-966273136781" -> null
+      - object_lock_enabled         = false -> null
+      - region                      = "us-east-2" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {} -> null
+        # (3 unchanged attributes hidden)
+
+      - grant {
+          - id          = "82e18acaacca84a3ce5b27ebcf1c7762064229e050ca78b5ec7a54acc38b3831" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_security_group.ec2 will be destroyed
+  - resource "aws_security_group" "ec2" {
+      - arn                    = "arn:aws:ec2:us-east-2:966273136781:security-group/sg-09fd507ca9e5342da" -> null
+      - description            = "Grupo de seguridad para la instancia de EC2 de la actividad" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - id                     = "sg-09fd507ca9e5342da" -> null
+      - ingress                = [] -> null
+      - name                   = "lab-ec2-sg" -> null
+      - owner_id               = "966273136781" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "lab-ec2-sg"
+        } -> null
+      - tags_all               = {
+          - "Name" = "lab-ec2-sg"
+        } -> null
+      - vpc_id                 = "vpc-0acc2bc39fef6d204" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_security_group.rds will be destroyed
+  - resource "aws_security_group" "rds" {
+      - arn                    = "arn:aws:ec2:us-east-2:966273136781:security-group/sg-07ed06064794496a9" -> null
+      - description            = "Solo permite PostgreSQL desde la instancia de EC2 de la actividad" -> null
+      - egress                 = [] -> null
+      - id                     = "sg-07ed06064794496a9" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = []
+              - from_port        = 5432
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-09fd507ca9e5342da",
+                ]
+              - self             = false
+              - to_port          = 5432
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - name                   = "lab-rds-sg" -> null
+      - owner_id               = "966273136781" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "lab-rds-sg"
+        } -> null
+      - tags_all               = {
+          - "Name" = "lab-rds-sg"
+        } -> null
+      - vpc_id                 = "vpc-0acc2bc39fef6d204" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+Plan: 0 to add, 0 to change, 5 to destroy.
+
+Changes to Outputs:
+  - bucket_name     = "lab-bucket-966273136781" -> null
+  - ec2_instance_id = "i-012bf658030d2db68" -> null
+  - rds_endpoint    = "lab-db.cvwk6kcg8sv3.us-east-2.rds.amazonaws.com:5432" -> null
+  - rds_secret_arn  = "arn:aws:secretsmanager:us-east-2:966273136781:secret:rds!db-c96d03ac-5f35-43e1-b7f1-03a2a652e310-EkK5Q3" -> null
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_db_instance.lab: Destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E]
+aws_s3_bucket.lab: Destroying... [id=lab-bucket-966273136781]
+aws_instance.lab: Destroying... [id=i-012bf658030d2db68]
+aws_s3_bucket.lab: Destruction complete after 1s
+aws_instance.lab: Still destroying... [id=i-012bf658030d2db68, 00m10s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 00m10s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 00m18s elapsed]
+aws_instance.lab: Still destroying... [id=i-012bf658030d2db68, 00m18s elapsed]
+aws_instance.lab: Still destroying... [id=i-012bf658030d2db68, 00m28s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 00m28s elapsed]
+aws_instance.lab: Destruction complete after 29s
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 00m38s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 00m46s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 00m57s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 01m07s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 01m15s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 01m25s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 01m35s elapsed]
+aws_db_instance.lab: Still destroying... [id=db-UXC4EPHOUQWU52CKXQXLJHMY7E, 01m43s elapsed]
+aws_db_instance.lab: Destruction complete after 1m45s
+aws_security_group.rds: Destroying... [id=sg-07ed06064794496a9]
+aws_security_group.rds: Destruction complete after 1s
+aws_security_group.ec2: Destroying... [id=sg-09fd507ca9e5342da]
+aws_security_group.ec2: Destruction complete after 2s
+
+Destroy complete! Resources: 5 destroyed.
