@@ -1,0 +1,6 @@
+Terminating EC2...
+Deleting RDS (5-10 minutes)...
+Deleted rds_sg
+Deleted ec2_sg
+Deleted bucket lab-bucket-966273136781
+Done.

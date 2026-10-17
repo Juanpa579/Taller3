@@ -1,0 +1,26 @@
+transaction_id,region,product,revenue,date
+8000,North,Widget A,100.0,2026-10-01
+8001,South,Widget B,110.5,2026-09-30
+8002,East,Gadget X,121.0,2026-09-29
+8003,West,Gadget Y,131.5,2026-09-28
+8004,North,Widget A,142.0,2026-09-27
+8005,South,Widget B,152.5,2026-09-26
+8006,East,Gadget X,163.0,2026-09-25
+8007,West,Gadget Y,173.5,2026-09-24
+8008,North,Widget A,184.0,2026-09-23
+8009,South,Widget B,194.5,2026-09-22
+8010,East,Gadget X,205.0,2026-09-21
+8011,West,Gadget Y,215.5,2026-09-20
+8012,North,Widget A,226.0,2026-09-19
+8013,South,Widget B,236.5,2026-09-18
+8014,East,Gadget X,247.0,2026-09-17
+8015,West,Gadget Y,257.5,2026-09-16
+8016,North,Widget A,268.0,2026-09-15
+8017,South,Widget B,278.5,2026-09-14
+8018,East,Gadget X,289.0,2026-09-13
+8019,West,Gadget Y,299.5,2026-09-12
+8020,North,Widget A,310.0,2026-09-11
+8021,South,Widget B,320.5,2026-09-10
+8022,East,Gadget X,331.0,2026-09-09
+8023,West,Gadget Y,341.5,2026-09-08
+8024,North,Widget A,352.0,2026-09-07

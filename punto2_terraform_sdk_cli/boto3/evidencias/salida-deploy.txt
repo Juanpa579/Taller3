@@ -1,0 +1,8 @@
+Running as: arn:aws:iam::966273136781:user/user_cli
+Security groups created
+Bucket created: lab-bucket-966273136781
+EC2 instance created: i-0daef8445ca631b72
+RDS creation started. Waiting (5-10 minutes)...
+RDS endpoint: lab-db.cvwk6kcg8sv3.us-east-2.rds.amazonaws.com
+Password secret: arn:aws:secretsmanager:us-east-2:966273136781:secret:rds!db-4fb8465e-f588-4c0e-a0be-e6c9db5ef7a9-l2EH9G
+Done. Everything is running.

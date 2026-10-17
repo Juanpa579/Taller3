@@ -1,0 +1,25 @@
+Insertados: 10
+
+--- FILTRO (promedio >= 4.0) ---
+{'nombre': 'Ana', 'carrera': 'Ingeniería de Sistemas', 'semestre': 5, 'promedio': 4.2}
+{'nombre': 'María', 'carrera': 'Ingeniería de Sistemas', 'semestre': 7, 'promedio': 4.5}
+{'nombre': 'Sofía', 'carrera': 'Ingeniería Civil', 'semestre': 6, 'promedio': 4.0}
+{'nombre': 'Laura', 'carrera': 'Ingeniería Mecánica', 'semestre': 8, 'promedio': 4.7}
+{'nombre': 'Camila', 'carrera': 'Ingeniería de Sistemas', 'semestre': 9, 'promedio': 4.8}
+
+--- ORDENACIÓN (promedio desc) ---
+{'nombre': 'Camila', 'carrera': 'Ingeniería de Sistemas', 'semestre': 9, 'promedio': 4.8}
+{'nombre': 'Laura', 'carrera': 'Ingeniería Mecánica', 'semestre': 8, 'promedio': 4.7}
+{'nombre': 'María', 'carrera': 'Ingeniería de Sistemas', 'semestre': 7, 'promedio': 4.5}
+{'nombre': 'Ana', 'carrera': 'Ingeniería de Sistemas', 'semestre': 5, 'promedio': 4.2}
+{'nombre': 'Sofía', 'carrera': 'Ingeniería Civil', 'semestre': 6, 'promedio': 4.0}
+{'nombre': 'Juan', 'carrera': 'Ingeniería de Sistemas', 'semestre': 4, 'promedio': 3.9}
+{'nombre': 'Luis', 'carrera': 'Ingeniería Civil', 'semestre': 3, 'promedio': 3.8}
+{'nombre': 'Diego', 'carrera': 'Ingeniería Mecánica', 'semestre': 5, 'promedio': 3.7}
+{'nombre': 'Carlos', 'carrera': 'Ingeniería Mecánica', 'semestre': 2, 'promedio': 3.5}
+{'nombre': 'Pedro', 'carrera': 'Ingeniería Civil', 'semestre': 1, 'promedio': 3.2}
+
+--- AGREGACIÓN (por carrera) ---
+{'_id': 'Ingeniería de Sistemas', 'total_estudiantes': 4, 'promedio_general': 4.35}
+{'_id': 'Ingeniería Mecánica', 'total_estudiantes': 3, 'promedio_general': 3.9666666666666663}
+{'_id': 'Ingeniería Civil', 'total_estudiantes': 3, 'promedio_general': 3.6666666666666665}

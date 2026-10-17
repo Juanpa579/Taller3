@@ -1,0 +1,3 @@
+boto3
+pymongo
+gremlinpython==3.7.*

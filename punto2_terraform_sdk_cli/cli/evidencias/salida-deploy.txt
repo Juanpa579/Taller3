@@ -1,0 +1,7 @@
+Account: 966273136781
+Security groups created: sg-04899fcc89fd1f7f7, sg-0e48ba70a274fe0f5
+Bucket created: lab-bucket-966273136781
+EC2 instance created: i-0e972939554315678
+RDS creation started. Waiting (5-10 minutes)...
+lab-db.cvwk6kcg8sv3.us-east-2.rds.amazonaws.com arn:aws:secretsmanager:us-east-2:966273136781:secret:rds!db-b87f9d49-be88-42f4-812b-66b5e7a41bce-hYQ06S
+Done. Everything is running.

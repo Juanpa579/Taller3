@@ -1,0 +1,14 @@
+Terminating EC2...
+Deleting RDS (5-10 minutes)...
+{
+    "Return": true,
+    "GroupId": "sg-0e48ba70a274fe0f5"
+}
+Deleted sg-0e48ba70a274fe0f5
+{
+    "Return": true,
+    "GroupId": "sg-04899fcc89fd1f7f7"
+}
+Deleted sg-04899fcc89fd1f7f7
+remove_bucket: lab-bucket-966273136781
+Done.
