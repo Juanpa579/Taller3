@@ -27,7 +27,7 @@ Los README de los puntos 4, 5 y 6 indican en una sección **«Estado»** qué es
 ├── requirements.txt
 ├── .gitignore
 ├── punto1_secrets_manager/      # script Boto3, política de acceso, evidencia
-├── punto2_terraform_sdk_cli/    # terraform/, boto3/, cli/, permisos.json
+├── punto2_terraform_sdk_cli/    # terraform/, boto3/, cli/, permisos.json, evidencias
 ├── punto3_documentdb/           # docdb.py, certificado CA, evidencias
 ├── punto4_neptune/              # neptune_queries.py, evidencias
 ├── punto5_redshift/             # generate_data.py, redshift_etl.py, CSV, evidencias
@@ -51,8 +51,6 @@ aws sts get-caller-identity
 - Los programas recuperan toda contraseña desde **AWS Secrets Manager** en tiempo de ejecución; ningún script la lleva escrita.
 
 ## Pendientes antes de la entrega final
-
-- [ ] **Punto 2:** agregar capturas de `terraform plan/apply/destroy` (las evidencias actuales cubren solo Boto3 y AWS CLI).
 - [ ] **Punto 4:** ejecutar `neptune_queries.py` con el túnel activo, guardar la salida en `punto4_neptune/evidencias/` y eliminar los recursos.
 - [ ] **Punto 5:** sincronizar usuario y contraseña del namespace con el secreto, ejecutar `redshift_etl.py` y eliminar los recursos.
 - [ ] **Punto 6:** capturar el esquema del crawler, ejecutar `glue_add_records.py` + re-crawl y eliminar los recursos.
